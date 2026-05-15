@@ -5,71 +5,244 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vela — Privacy Policy</title>
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      max-width: 740px;
-      margin: 0 auto;
-      padding: 40px 24px;
-      color: #1a1a1a;
-      line-height: 1.7;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    h1 { font-size: 28px; margin-bottom: 4px; }
-    h2 { font-size: 18px; margin-top: 32px; }
-    p, li { font-size: 15px; color: #333; }
-    a { color: #E8A872; }
-    .updated { color: #888; font-size: 13px; margin-bottom: 32px; }
+
+    body {
+      background-color: #0B0D14;
+      color: #E8E2D2;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      padding: 0 24px 80px;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 60px 0 40px;
+      border-bottom: 1px solid rgba(232, 168, 114, 0.2);
+      margin-bottom: 48px;
+    }
+
+    .logo {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #E8A872;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 500;
+      color: #F5F1E8;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-style: italic;
+    }
+
+    .updated {
+      font-size: 13px;
+      color: #5A6072;
+      margin-top: 8px;
+    }
+
+    h2 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #E8A872;
+      margin-top: 48px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: #C8C2B2;
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 16px;
+    }
+
+    ul li {
+      color: #C8C2B2;
+      font-size: 15px;
+      padding: 8px 0;
+      padding-left: 20px;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    ul li:last-child {
+      border-bottom: none;
+    }
+
+    ul li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: #E8A872;
+      font-size: 8px;
+      top: 12px;
+    }
+
+    strong {
+      color: #F5F1E8;
+      font-weight: 600;
+    }
+
+    a {
+      color: #E8A872;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(232, 168, 114, 0.3);
+      transition: border-color 0.2s;
+    }
+
+    a:hover {
+      border-bottom-color: #E8A872;
+    }
+
+    .section {
+      background: #11141C;
+      border: 1px solid #252B38;
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 16px;
+    }
+
+    .section h2 {
+      margin-top: 0;
+    }
+
+    .contact-box {
+      background: rgba(232, 168, 114, 0.06);
+      border: 1px solid rgba(232, 168, 114, 0.2);
+      border-radius: 16px;
+      padding: 28px;
+      margin-top: 48px;
+      text-align: center;
+    }
+
+    .contact-box p {
+      margin-bottom: 12px;
+    }
+
+    .contact-box a {
+      font-size: 17px;
+      font-weight: 600;
+      color: #E8A872;
+      border-bottom: none;
+    }
+
+    footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid #1A1E28;
+      text-align: center;
+      color: #5A6072;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+    }
   </style>
 </head>
 <body>
+  <div class="container">
 
-<h1>Privacy Policy</h1>
-<p class="updated">Last updated: May 16, 2026</p>
+    <header>
+      <div class="logo">✦ Vela</div>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: May 16, 2026</p>
+    </header>
 
-<p>Vela ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our mobile application Vela ("the App").</p>
+    <p>Vela is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our mobile application.</p>
 
-<h2>1. Information We Collect</h2>
-<p>Vela is designed with privacy in mind. We collect minimal information:</p>
-<ul>
-  <li><strong>Decision data:</strong> The decisions, descriptions, and notes you enter are stored locally on your device using AsyncStorage. This data is never sent to our servers or shared with third parties.</li>
-  <li><strong>AI analysis:</strong> When you request an AI analysis, your decision text is sent encrypted to our AI backend (powered by Supabase Edge Functions) solely for the purpose of generating an analysis. This data is not stored on our servers after processing.</li>
-  <li><strong>Purchase information:</strong> If you subscribe to Vela Premium, purchase transactions are handled by Apple (App Store) or Google (Google Play). We use RevenueCat to manage subscription status. RevenueCat may collect anonymized purchase data as described in their privacy policy.</li>
-  <li><strong>Language preference:</strong> Your selected language is stored locally on your device.</li>
-  <li><strong>Name:</strong> If you choose to set a display name, it is stored locally on your device only.</li>
-</ul>
+    <div class="section">
+      <h2>1. Information We Collect</h2>
+      <ul>
+        <li><strong>Decision data:</strong> Your decisions, descriptions, and notes are stored locally on your device by default. Only the specific text you choose to analyze is securely transmitted to our AI backend for processing.</li>
+        <li><strong>AI analysis:</strong> When you request an AI analysis, the relevant text is sent via HTTPS to our backend (Supabase Edge Functions) solely to generate your analysis. We do not intentionally store your content after processing and do not use it for advertising or profiling.</li>
+        <li><strong>Purchase information:</strong> Premium subscriptions are processed by Apple or Google. We use RevenueCat to manage subscription status only.</li>
+        <li><strong>Language & display name:</strong> Stored locally on your device only.</li>
+      </ul>
+    </div>
 
-<h2>2. Information We Do NOT Collect</h2>
-<ul>
-  <li>We do not collect your name, email address, or any personal identifiers.</li>
-  <li>We do not use analytics or tracking SDKs.</li>
-  <li>We do not serve advertisements.</li>
-  <li>We do not sell or share your data with third parties.</li>
-  <li>We do not store your decision data on any server.</li>
-</ul>
+    <div class="section">
+      <h2>2. What We Do NOT Collect</h2>
+      <ul>
+        <li>No email address or persistent personal identifiers</li>
+        <li>No advertising or behavioral tracking SDKs</li>
+        <li>No advertisements are served</li>
+        <li>We do not sell your data to third parties</li>
+        <li>We do not use your data for profiling or automated decision-making</li>
+      </ul>
+    </div>
 
-<h2>3. Data Storage</h2>
-<p>All your decision data, notes, and settings are stored locally on your device. If you delete the app, all locally stored data will be permanently deleted. We have no ability to recover this data.</p>
+    <div class="section">
+      <h2>3. Data Storage</h2>
+      <p>All your data is stored locally on your device. If you delete the app, all data is permanently deleted. We have no ability to recover it.</p>
+    </div>
 
-<h2>4. AI Analysis</h2>
-<p>When you submit a decision for AI analysis, the text is transmitted securely (HTTPS) to our backend service. The data is used only to generate your analysis response and is not stored, logged, or used for training purposes.</p>
+    <div class="section">
+      <h2>4. AI Analysis</h2>
+      <p>Decision text is transmitted securely (HTTPS) to our backend for analysis only. We do not intentionally store your content after processing and do not use it for advertising or profiling purposes. Standard infrastructure error logging may apply as part of normal backend operations.</p>
+    </div>
 
-<h2>5. In-App Purchases</h2>
-<p>Vela offers an optional Premium subscription. All payment processing is handled by Apple App Store or Google Play Store. We do not collect or store your payment information. Subscription management is handled via RevenueCat. Please review RevenueCat's privacy policy at <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.</p>
+    <div class="section">
+      <h2>5. In-App Purchases</h2>
+      <p>All payments are processed by Apple App Store or Google Play. We do not collect payment information. Subscription management is via RevenueCat — see their policy at <a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a>.</p>
+    </div>
 
-<h2>6. Children's Privacy</h2>
-<p>Vela is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us.</p>
+    <div class="section">
+      <h2>6. Children's Privacy</h2>
+      <p>Vela is not intended for children under the age required by applicable local laws for consent to digital services (typically 13 in the US, 16 in the EU). We do not knowingly collect information from children.</p>
+    </div>
 
-<h2>7. Security</h2>
-<p>We implement appropriate technical measures to protect your information. All data transmitted to our backend is encrypted using HTTPS. Your local data is protected by your device's built-in security.</p>
+    <div class="section">
+      <h2>7. Security</h2>
+      <p>All data transmitted to our backend is encrypted via HTTPS. Your local data is protected by your device's built-in security.</p>
+    </div>
 
-<h2>8. Changes to This Policy</h2>
-<p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by updating the date at the top of this policy. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+    <div class="section">
+      <h2>8. Third-Party Services</h2>
+      <ul>
+        <li><strong>Supabase</strong> — AI backend infrastructure. <a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a></li>
+        <li><strong>RevenueCat</strong> — Subscription management. <a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a></li>
+        <li><strong>Apple / Google</strong> — Payment processing and app distribution.</li>
+      </ul>
+    </div>
 
-<h2>9. Your Rights</h2>
-<p>Since we do not collect personal data on our servers, there is no data to access, correct, or delete from our side. You can delete all your data at any time by uninstalling the app.</p>
+    <div class="section">
+      <h2>9. Changes to This Policy</h2>
+      <p>We may update this policy from time to time. Significant changes will be reflected by updating the date above. Continued use of the App constitutes acceptance.</p>
+    </div>
 
-<h2>10. Contact Us</h2>
-<p>If you have any questions about this Privacy Policy, please contact us at:<br/>
-<a href="mailto:hello@vela.app">hello@vela.app</a></p>
+    <div class="section">
+      <h2>10. Your Rights</h2>
+      <p>Since we do not collect personal data on our servers, there is nothing to access or delete from our side. You can delete all local data by uninstalling the app.</p>
+    </div>
 
+    <div class="contact-box">
+      <p>Questions about this Privacy Policy?</p>
+      <a href="mailto:hello@vela.app">hello@vela.app</a>
+    </div>
+
+    <footer>
+      © 2026 Vela · All rights reserved
+    </footer>
+
+  </div>
 </body>
 </html>
